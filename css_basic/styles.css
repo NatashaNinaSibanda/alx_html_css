@@ -35,3 +35,44 @@ header, footer {
   background-color: #eee;
   border: 1px solid #ccc;
 }
+ 
+article {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+article h1, article h2, article h3 {
+    color: fuchsia;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(101, 106, 124);
+    font-weight: bold;
+}
+
+td, th {
+    padding: 10px;
+    text-align: left;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: goldenrod;
+}
