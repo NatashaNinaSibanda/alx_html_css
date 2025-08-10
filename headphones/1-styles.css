@@ -91,3 +91,66 @@ body {
   line-height: 1.6;
   opacity: 0.9;
 }
+
+/* Container center and padding */
+#what-we-do .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white; /* white background */
+  border-radius: 12px; /* optional, nice rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow for depth */
+}
+
+/* Style the section heading h2 */
+#what-we-do .container h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Flex container for horizontal items */
+.what-we-do-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Individual item styling */
+.what-we-do-items .item {
+  flex: 1 1 200px;
+  max-width: 200px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Icon styles */
+.what-we-do-items .item span {
+  font-size: 60px;
+  color: #ff6565;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Item heading h3 */
+.what-we-do-items .item h3 {
+  color: black;
+  font-weight: 700; /* bold */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Item paragraph p */
+.what-we-do-items .item p {
+  color: black;
+  font-weight: 400; /* normal weight */
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
