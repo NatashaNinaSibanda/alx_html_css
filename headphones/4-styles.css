@@ -1,0 +1,318 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Header styling */
+.header {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  color: white;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('images/background.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  text-transform: lowercase;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.9;
+}
+
+/* Hero content - center vertically and horizontally */
+.hero-content {
+  text-align: center;
+  margin: auto; /* Center vertically in flex container */
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content button {
+  background-color: #ff6565;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.hero-content button:hover {
+  opacity: 0.9;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Container center and padding */
+#what-we-do .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white; /* white background */
+  border-radius: 12px; /* optional, nice rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow for depth */
+}
+
+/* Style the section heading h2 */
+#what-we-do .container h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Flex container for horizontal items */
+.what-we-do-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Individual item styling */
+.what-we-do-items .item {
+  flex: 1 1 200px;
+  max-width: 200px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Icon styles */
+.what-we-do-items .item span {
+  font-size: 60px;
+  color: #ff6565;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Item heading h3 */
+.what-we-do-items .item h3 {
+  color: black;
+  font-weight: 700; /* bold */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Item paragraph p */
+.what-we-do-items .item p {
+  color: black;
+  font-weight: 400; /* normal weight */
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+/* -------------------- OUR RESULTS SECTION -------------------- */
+#our-results {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+  background: url('images/background for our results.jpg') no-repeat center center/cover;
+}
+
+#our-results .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* stays behind text */
+}
+
+#our-results .container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1; /* stays above overlay */
+}
+
+#our-results h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#our-results p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.results-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.result {
+  text-align: center;
+}
+
+.result .percentage {
+  font-size: 2rem;
+  font-weight: bold;
+  background: #fff;
+  color: #001233;
+  padding: 20px;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.result p {
+  margin-top: 10px;
+}
+
+/* Contact section container */
+#contact-us .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/* Heading */
+#contact-us h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Form styling */
+#contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Inputs and textarea */
+#contact-us input,
+#contact-us textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+  color: black;
+}
+
+#contact-us input::placeholder,
+#contact-us textarea::placeholder {
+  color: #888;
+}
+
+/* Button styling */
+#contact-us button {
+  background-color: #ff6565;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+
+#contact-us button:hover {
+  opacity: 0.9;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #0a1a2a; /* dark navy */
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-left img {
+  height: 40px;
+}
+
+.footer-right a {
+  .footer-right img {
+  filter: brightness(0) invert(1); /* Makes black icons white */
+  margin-left: 15px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #ff6565;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Make footer responsive */
+@media (max-width: 600px) {
+  .footer .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
