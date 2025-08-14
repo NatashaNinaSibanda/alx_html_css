@@ -154,62 +154,72 @@ body {
   line-height: 1.4;
 }
 
-
-/* -------------------- OUR RESULTS SECTION -------------------- */
+/* OUR RESULTS SECTION */
 #our-results {
-  position: relative;
-  text-align: center;
+  background-image: url('images/background for our results.jpg'); /* dark background */
   color: white;
-  padding: 80px 20px;
-  background: url('images/background for our results.jpg') no-repeat center center/cover;
-}
-
-#our-results .overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 0; /* stays behind text */
+  text-align: center;
+  padding: 60px 20px;
 }
 
 #our-results .container {
-  position: relative;
   max-width: 900px;
   margin: 0 auto;
-  z-index: 1; /* stays above overlay */
 }
 
 #our-results h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
 #our-results p {
-  max-width: 700px;
-  margin: 0 auto 40px;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #ddd;
 }
 
-.results-items {
+/* Pentagon container */
+.pentagons {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
-.result {
+/* Pentagon shape */
+.pentagon {
+  position: relative;
+  width: 120px;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 40px 60px;
+  border-color: transparent transparent #ff6565 transparent;
+}
+
+.pentagon::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 70px 60px 0 60px;
+  border-color: #ff6565 transparent transparent transparent;
+}
+
+.pentagon p {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-}
-
-.result .percentage {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
-  background: #fff;
-  color: #001233;
-  padding: 20px;
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  color: white;
 }
 
-.result p {
-  margin-top: 10px;
-}
 
 /* Contact section container */
 #contact-us .container {
@@ -315,4 +325,78 @@ body {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+
+/* ANIMATION EFFECTS */
+
+/* Fade-up and scale in on hover for What we do items */
+.what-items .item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.what-items .item:hover {
+  transform: scale(1.1) translateY(-5px);
+  opacity: 0.9;
+}
+
+/* Bounce animation for Our Results pentagons */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.results-items .pentagon {
+  animation: bounce 2s infinite;
+  transition: transform 0.3s ease;
+}
+.results-items .pentagon:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+
+.pentagon {
+  position: relative;
+  width: 120px;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 40px 60px;
+  border-color: transparent transparent #ff6565 transparent;
+  margin: 20px;
+}
+
+.pentagon::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 70px 60px 0 60px;
+  border-color: #ff6565 transparent transparent transparent;
+}
+
+.pentagon p {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Layout for Results items */
+.results-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
